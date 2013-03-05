@@ -1,0 +1,12 @@
+{
+  "name": "checklist",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "maria": "http://peter.michaux.ca/downloads/maria/rc5/maria.js"
+  }
+}
