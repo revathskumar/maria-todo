@@ -5,13 +5,12 @@ maria.ElementView.subclass(checklist,'TodoView',{
   properties: {
     buildData: function(){
       var model = this.getModel();
-      console.log(model.isDone());
       $(this.find('.content')).html(model.getContent());
       if(model.isDone()){
-        $(this.find('.Todo')).addClass('TodoDone').removeClass('Todo');
+        $(this.find('.Todo')).addClass('TodoDone');
       }
       else{
-        $(this.find('.Todo')).addClass('Todo').removeClass('TodoDone');
+        $(this.find('.Todo')).removeClass('TodoDone');
       }
     },
     update: function(){
