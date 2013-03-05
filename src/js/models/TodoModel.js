@@ -14,7 +14,7 @@ maria.Model.subclass(checklist, 'TodoModel',{
     },
     setDone: function(){
       this._isDone = true;
-      this.dispatchEvent({type:change});
+      this.dispatchEvent({type:'change'});
     },
     toggleDone:function(){
       this.setDone(!this.isDone);
