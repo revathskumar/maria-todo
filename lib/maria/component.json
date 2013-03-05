@@ -1,9 +1,0 @@
-{
-  "name": "maria",
-  "main": "index.js",
-  "version": "0.0.0",
-  "repository": {
-    "type": "asset",
-    "url": "http://peter.michaux.ca/downloads/maria/rc5/maria.js"
-  }
-}
