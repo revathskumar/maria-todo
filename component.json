@@ -7,6 +7,7 @@
     "components"
   ],
   "dependencies": {
-    "maria": "http://peter.michaux.ca/downloads/maria/rc5/maria.js"
+    "maria": "http://peter.michaux.ca/downloads/maria/rc5/maria.js",
+    "jquery": "~1.9.1"
   }
 }
