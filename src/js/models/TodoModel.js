@@ -12,12 +12,12 @@ maria.Model.subclass(checklist, 'TodoModel',{
     isDone: function(){
       return this._isDone;
     },
-    setDone: function(){
-      this._isDone = true;
+    setDone: function(isDone){
+      this._isDone = isDone;
       this.dispatchEvent({type:'change'});
     },
     toggleDone:function(){
-      this.setDone(!this.isDone);
+      this.setDone(!this.isDone());
     }
   }
 });
