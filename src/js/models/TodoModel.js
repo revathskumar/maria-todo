@@ -18,6 +18,19 @@ maria.Model.subclass(checklist, 'TodoModel',{
     },
     toggleDone:function(){
       this.setDone(!this.isDone());
+    },
+    toJSON: function(){
+      return {
+        content: this.getContent(),
+        done: this.isDone()
+      };
     }
   }
 });
+
+checklist.TodoModel.fromJSON = function(todo){
+  var model = new checklist.TodoModel();
+  model.setContent(todo.content);
+  model.setDone(todo.done);
+  return model;
+};

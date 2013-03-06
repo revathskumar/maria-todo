@@ -23,6 +23,22 @@ maria.SetModel.subclass(checklist,'TodosModel',{
     },
     deleteDone: function(){
       this['delete'].apply(this,this.getDone());
+    },
+    toJSON: function(){
+      return this.map(function(todo){
+        return todo.toJSON();
+      });
     }
   }
 });
+
+checklist.TodosModel.fromJSON = function(collection){
+  if(collection === null){
+    return;
+  }
+  var model = new checklist.TodosModel();
+  for(i = 0, l = collection.length; i < l; i++){
+    model.add(checklist.TodoModel.fromJSON(collection[i]));
+  }
+  return model;
+};

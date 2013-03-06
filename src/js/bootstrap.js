@@ -1,21 +1,15 @@
-(function(){
-  var todoList = new checklist.TodosModel();
+jQuery(function($){
 
-  var todoModel = new checklist.TodoModel();
-  todoModel.setContent("Hello world!!");
-  todoList.add(todoModel);
+  var store = localStorage.getItem('maria-todo');
+  var todoList = store ? checklist.TodosModel.fromJSON(JSON.parse(store)) :
+    new checklist.TodosModel();
 
-  var todo2 = new checklist.TodoModel();
-  todo2.setContent("World Hello!!");
-
-  var todo3 = new checklist.TodoModel();
-  todo3.setContent("Add another!!");
-
-  todoList.add(todo2, todo3);
-
+  maria.on(todoList,'change',function(){
+    localStorage.setItem('maria-todo',JSON.stringify(todoList.toJSON()));
+  });
 
   var view = new checklist.TodosListView(todoList);
   var inputView = new checklist.TodoInputView(todoList);
   $('body').append(inputView.build());
   $('body').append(view.build());
-})();
+});
