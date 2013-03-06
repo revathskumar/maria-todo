@@ -1,4 +1,4 @@
-maria.setModle.subclass(checklist,'TodosModel',{
+maria.SetModel.subclass(checklist,'TodosModel',{
   properties:{
     getDone:function(){
       return this.filter(function(todo){
