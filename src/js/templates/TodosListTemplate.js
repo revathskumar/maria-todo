@@ -1,2 +1,2 @@
-checklist.TodoslistTemplate =
+checklist.TodosListTemplate =
   '<ul class="TodosList"></ul>';
