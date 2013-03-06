@@ -5,7 +5,7 @@ maria.Controller.subclass(checklist,'TodoInputController',{
       todo.setContent(this.getView().getInputValue());
 
       this.getModel().add(todo);
-      this.getView().clearInput()
+      this.getView().clearInput();
     }
   }
 });
