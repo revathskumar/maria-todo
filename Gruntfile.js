@@ -150,10 +150,13 @@ module.exports = function (grunt) {
     },
     uglify: {
       dist: {
+        options: {
+          mangle: false
+        },
         files: {
           '<%= yeoman.dist %>/scripts/main.js': [
             '<%= yeoman.app %>/scripts/{,*/}*.js'
-          ],
+          ]
         }
       }
     },
@@ -266,9 +269,8 @@ module.exports = function (grunt) {
     'useminPrepare',
     'imagemin',
     'htmlmin',
-    'concat',
     'cssmin',
-    'uglify',
+    'concat',
     'copy',
     'usemin'
   ]);
