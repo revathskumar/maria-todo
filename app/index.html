@@ -1,23 +1,53 @@
-<html>
-  <head>
-    <title>Todo with Maria JS</title>
-    <link rel="stylesheet" href="styles/Todo.css">
-  </head>
-  <body>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Todo with Maria JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:js scripts/modernizr.js -->
+        <script src="scripts/vendor/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
 
-    <script src="scripts/vendor/maria/index.js"></script>
-    <script src="scripts/vendor/jquery/jquery.js"></script>
-    <script src="scripts/namespace.js"></script>
-    <script src="scripts/models/TodoModel.js"></script>
-    <script src="scripts/models/TodosModel.js"></script>
-    <script src="scripts/templates/TodoTemplate.js"></script>
-    <script src="scripts/templates/TodosListTemplate.js"></script>
-    <script src="scripts/templates/TodoInputTemplate.js"></script>
-    <script src="scripts/views/TodoView.js"></script>
-    <script src="scripts/views/TodosListView.js"></script>
-    <script src="scripts/views/TodoInputView.js"></script>
-    <script src="scripts/controllers/TodoController.js"></script>
-    <script src="scripts/controllers/TodoInputController.js"></script>
-    <script src="scripts/bootstrap.js"></script>
+        <!-- build:js scripts/vendor.js -->
+        <script src="scripts/vendor/maria/index.js"></script>
+        <script src="scripts/vendor/jquery/jquery.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/namespace.js"></script>
+        <script src="scripts/models/TodoModel.js"></script>
+        <script src="scripts/models/TodosModel.js"></script>
+        <script src="scripts/templates/TodoTemplate.js"></script>
+        <script src="scripts/templates/TodosListTemplate.js"></script>
+        <script src="scripts/templates/TodoInputTemplate.js"></script>
+        <script src="scripts/views/TodoView.js"></script>
+        <script src="scripts/views/TodosListView.js"></script>
+        <script src="scripts/views/TodoInputView.js"></script>
+        <script src="scripts/controllers/TodoController.js"></script>
+        <script src="scripts/controllers/TodoInputController.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
   </body>
 </html>
+
